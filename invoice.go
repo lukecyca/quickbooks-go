@@ -12,8 +12,6 @@ import (
 	"net/url"
 	"strconv"
 	"time"
-
-	null "gopkg.in/guregu/null.v3"
 )
 
 // Invoice represents a QuickBooks Invoice object.
@@ -35,12 +33,12 @@ type Invoice struct {
 	ShipAddr     PhysicalAddress `json:",omitempty"`
 	ClassRef     ReferenceType   `json:",omitempty"`
 	SalesTermRef ReferenceType   `json:",omitempty"`
-	DueDate      Date            `json:",omitempty"`
+	//DueDate      Date            `json:",omitempty"`
 	//GlobalTaxCalculation
 	ShipMethodRef ReferenceType `json:",omitempty"`
-	ShipDate      Date          `json:",omitempty"`
-	TrackingNum   string        `json:",omitempty"`
-	TotalAmt      json.Number   `json:",omitempty"`
+	//ShipDate      Date          `json:",omitempty"`
+	TrackingNum string      `json:",omitempty"`
+	TotalAmt    json.Number `json:",omitempty"`
 	//CurrencyRef
 	ExchangeRate          json.Number  `json:",omitempty"`
 	HomeAmtTotal          json.Number  `json:",omitempty"`
@@ -104,7 +102,7 @@ type SalesItemLineDetail struct {
 	Qty             int           `json:",omitempty"`
 	ItemAccountRef  ReferenceType `json:",omitempty"`
 	TaxCodeRef      ReferenceType `json:",omitempty"`
-	ServiceDate     null.Time     `json:",omitempty"`
+	ServiceDate     Date          `json:",omitempty"`
 	TaxInclusiveAmt json.Number   `json:",omitempty"`
 	DiscountRate    json.Number   `json:",omitempty"`
 	DiscountAmt     json.Number   `json:",omitempty"`

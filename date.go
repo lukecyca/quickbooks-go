@@ -1,6 +1,7 @@
 package quickbooks
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -21,8 +22,10 @@ func (d *Date) UnmarshalJSON(b []byte) (err error) {
 	b = b[:10]
 
 	d.Time, err = time.Parse(format, string(b))
-
-	return err
+	if err != nil {
+		return fmt.Errorf("Could not parse Date: %s", err.Error())
+	}
+	return nil
 }
 
 func (d Date) String() string {

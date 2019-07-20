@@ -50,7 +50,7 @@ type Customer struct {
 	//SalesTermRef
 	//PaymentMethodRef
 	Balance         json.Number `json:",omitempty"`
-	OpenBalanceDate time.Time   `json:",omitempty"`
+	OpenBalanceDate Date        `json:",omitempty"`
 	BalanceWithJobs json.Number `json:",omitempty"`
 	//CurrencyRef
 }

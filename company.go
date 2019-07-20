@@ -11,8 +11,7 @@ type CompanyInfo struct {
 	//CustomerCommunicationAddr
 	//LegalAddr
 	//PrimaryPhone
-	//CompanyStartDate     time.Time
-	CompanyStartDate     string
+	CompanyStartDate     Date
 	FiscalYearStartMonth string
 	Country              string
 	//Email

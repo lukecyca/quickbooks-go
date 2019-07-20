@@ -37,10 +37,10 @@ type Item struct {
 	PurchaseCost        json.Number `json:",omitempty"`
 	AssetAccountRef     ReferenceType
 	TrackQtyOnHand      bool `json:",omitempty"`
-	//InvStartDate time.Time
-	QtyOnHand          json.Number   `json:",omitempty"`
-	SalesTaxCodeRef    ReferenceType `json:",omitempty"`
-	PurchaseTaxCodeRef ReferenceType `json:",omitempty"`
+	InvStartDate        Date
+	QtyOnHand           json.Number   `json:",omitempty"`
+	SalesTaxCodeRef     ReferenceType `json:",omitempty"`
+	PurchaseTaxCodeRef  ReferenceType `json:",omitempty"`
 }
 
 // FetchItems returns the list of Items in the QuickBooks account. These are
