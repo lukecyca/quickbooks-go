@@ -99,7 +99,7 @@ type SalesItemLineDetail struct {
 	ClassRef  ReferenceType `json:",omitempty"`
 	UnitPrice json.Number   `json:",omitempty"`
 	//MarkupInfo
-	Qty             int           `json:",omitempty"`
+	Qty             json.Number   `json:",omitempty"`
 	ItemAccountRef  ReferenceType `json:",omitempty"`
 	TaxCodeRef      ReferenceType `json:",omitempty"`
 	ServiceDate     Date          `json:",omitempty"`
